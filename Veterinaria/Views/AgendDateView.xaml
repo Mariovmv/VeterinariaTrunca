@@ -3,10 +3,92 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:Veterinaria.Views"
+             xmlns:local="clr-namespace:Veterinaria.Views" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="Orange">
+    <Grid Background="{DynamicResource PrimaryHueLightBrush}">
+        <DockPanel>
+            <StackPanel>
+                <TextBlock Text="Agenda una cita" 
+                           HorizontalAlignment="Center"
+                           Style="{StaticResource MaterialDesignHeadline4TextBlock}"
+                           Margin="10"/>
+                <materialDesign:Card
+                        Background="WhiteSmoke"
+                        Foreground="{DynamicResource PrimaryHueLightForegroundBrush}"
+                        Width="500"
+                        Height="360"
+                        Padding="8">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
 
+                        <StackPanel Grid.Row="0"
+                                    Grid.Column="0"
+                                    Grid.ColumnSpan="1">
+
+                            <StackPanel x:Name="DateElements"
+                                        VerticalAlignment="Stretch"
+                                        Width="200"
+                                        Margin="20">
+                                <TextBlock Text="Selecciona la fecha"
+                                           Style="{StaticResource MaterialDesignSubtitle1TextBlock}"/>
+
+
+                                <DatePicker x:Name="Date"
+                                        FontSize="15"
+                                        materialDesign:HintAssist.Hint="Fecha"
+                                        materialDesign:CalendarAssist.IsHeaderVisible="False">
+                                    <DatePicker.SelectedDate>
+                                        <Binding Path="FutureValidatingDate"
+                                             UpdateSourceTrigger="PropertyChanged">
+                                        </Binding>
+                                    </DatePicker.SelectedDate>
+                                </DatePicker>
+                            </StackPanel>
+
+                            <StackPanel x:Name="HourElements"
+                                        VerticalAlignment="Stretch"
+                                        Width="200"
+                                        Margin="20">
+                                <TextBlock Text="Selecciona la hora"
+                                           Style="{StaticResource MaterialDesignSubtitle1TextBlock}"/>
+
+                                <materialDesign:TimePicker x:Name="Hour"
+                                                            Is24Hours="False"
+                                                            />
+                            </StackPanel>
+
+                            <StackPanel x:Name="CodeElement"
+                                        VerticalAlignment="Stretch"
+                                        Width="200"
+                                        Margin="20">
+                                <TextBlock Text="Motivo de cita"
+                                           Style="{StaticResource MaterialDesignSubtitle1TextBlock}"/>
+                                <ComboBox materialDesign:HintAssist.Hint="Selecciona"
+                                          FontSize="15">
+                                    <ComboBoxItem Content="Consulta medica" />
+                                    <ComboBoxItem Content="Desparacitación" />
+                                    <ComboBoxItem Content="Tratamiento" />
+                                    <ComboBoxItem Content="Corte de pelo" />
+                                    <ComboBoxItem Content="Otro" />
+                                </ComboBox>
+                            </StackPanel>
+                            
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="1"
+                                    Grid.Column="1"
+                                    Grid.ColumnSpan="1">
+                            
+                        </StackPanel>
+                        
+                    </Grid>
+                </materialDesign:Card>
+            </StackPanel>
+        </DockPanel>
     </Grid>
 </UserControl>
