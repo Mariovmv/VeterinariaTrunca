@@ -139,6 +139,8 @@
     <Resource Include="res\images\back.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="res\images\dogsTogether.jpg" />
+    <Resource Include="res\images\golden.jpg" />
     <Content Include="res\images\Wave.svg" />
     <Resource Include="res\images\back2.png" />
     <Resource Include="res\images\registerBack.png" />
