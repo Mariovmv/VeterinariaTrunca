@@ -30,77 +30,87 @@
                 <ImageBrush ImageSource="../res/images/eXpresso.jpg" />
             </DockPanel.Background>
 
+            <StackPanel VerticalAlignment="Center">
+                
+                <TextBlock FontSize="20"
+                           Text="Datos de máscota"
+                           Foreground="White"
+                           TextAlignment="Center"
+                           Margin="10"/>
 
-            <materialDesign:Card
+                <materialDesign:Card
                     Background="WhiteSmoke"
+                    Padding="30"
                     Foreground="{DynamicResource PrimaryHueLightForegroundBrush}"
                     Width="350"
-                    Height="360"
-                    Padding="3 5">
-                <DockPanel>
+                    Height="360">
+                    <DockPanel HorizontalAlignment="Center">
 
-                    <StackPanel HorizontalAlignment="Center" Width="200">
-                        <TextBlock
-                            Style="{StaticResource MaterialDesignSubtitle2TextBlock}"
-                            Text="Datos de máscota" 
-                            Margin="0,13,0,-28"
-                            HorizontalAlignment="Left"/>
-                        <TextBox
-                            materialDesign:HintAssist.Hint="Nombre"
-                            Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                            FontSize="15"
-                            VerticalAlignment="Center" 
-                            Margin="0, 40, 0, 0"/>
+                        <StackPanel>
+                            
+                            <StackPanel x:Name="NameElements"
+                                        VerticalAlignment="Stretch" 
+                                        Width="250"
+                                        Margin="10">
+                                <TextBlock Text="Nombre de máscota"
+                                           FontSize="15"/>
+                                <TextBox    materialDesign:HintAssist.Hint="Nombre"
+                                            FontSize="15"
+                                            VerticalAlignment="Center" 
+                                            Margin="0"/>
+                            </StackPanel>
 
-                        <ComboBox
-                            materialDesign:HintAssist.Hint="Tipo"
-                            FontSize="15"
-                            Margin="0,30,0,0">
-                            <ComboBoxItem
-                                    Content="Perro" />
-                            <ComboBoxItem
-                                    Content="Gato" />
-                            <ComboBoxItem
-                                    Content="Roedor" />
-                            <ComboBoxItem
-                                    Content="Reptíl" />
-                            <ComboBoxItem
-                                    Content="Ave" />
-                        </ComboBox>
+                            <StackPanel x:Name="AgeElements"
+                                        VerticalAlignment="Stretch"
+                                        Width="250"
+                                        Margin="10">
+                                <TextBlock Text="Edad de la máscota"
+                                           FontSize="15"/>
+                                <TextBox    x:Name="AgeTextbox"
+                                            materialDesign:HintAssist.Hint="Edad"
+                                            FontSize="15"/>
+                            </StackPanel>
 
-                        <TextBox
-                            materialDesign:HintAssist.Hint="Edad (en años)"
-                            Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                            FontSize="15"
-                            Margin="0,10,0,0"
-                            VerticalAlignment="Center" />
+                            <StackPanel x:Name="GenereElements"
+                                        VerticalAlignment="Stretch"
+                                        Width="250"
+                                        Margin="10">
+                                <TextBlock  Text="Sexo de la máscota"
+                                            FontSize="15"/>
+                                <Grid Margin="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <RadioButton    IsChecked="false"
+                                                    Content="Macho"
+                                                    Grid.Column="0"
+                                                    Grid.ColumnSpan="1"
+                                                    Style="{StaticResource MaterialDesignDarkRadioButton}" />
+                                    <RadioButton    IsChecked="false"
+                                                    Content="Hembra"
+                                                    Grid.Column="1"
+                                                    Grid.ColumnSpan="1"
+                                                    Style="{StaticResource MaterialDesignDarkRadioButton}" />
+                                </Grid>
+                            </StackPanel>
 
-                        <ComboBox
-                            materialDesign:ComboBoxAssist.ClassicMode="{Binding ElementName=ClassicModeCheckBox, Path=IsChecked}"
-                            HorizontalAlignment="Left"
-                            materialDesign:HintAssist.Hint="Sexo"
-                            FontSize="15"
-                            Margin="0, 20, 0, 0">
-                            <ComboBoxItem
-                                    Content="N/A" />
-                            <ComboBoxItem
-                                    Content="Hembra" />
-                            <ComboBoxItem
-                                    Content="Macho" />
-                        </ComboBox>
+                            <StackPanel x:Name="button"
+                                        VerticalAlignment="Stretch"
+                                        Width="250">
+                                <Button Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                                        Width="200"
+                                        Margin="20"
+                                        ToolTip="Registrar máscota"
+                                        Content="Registrar" />
+                            </StackPanel>
+                            
+                        </StackPanel>
 
-                        <Button
-                            Style="{StaticResource MaterialDesignRaisedDarkButton}"
-                            Width="100"
-                            ToolTip="Haz click para registrar a la mascota"
-                            Content="Registrar" 
-                            Margin="0, 20, 0, 0"
-                            HorizontalAlignment="Right"/>
+                    </DockPanel>
+                </materialDesign:Card>
 
-                    </StackPanel>
-                </DockPanel>
-            </materialDesign:Card>
-
+            </StackPanel>
 
         </DockPanel>
 
