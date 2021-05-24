@@ -20,9 +20,74 @@ namespace Veterinaria.Views
     /// </summary>
     public partial class PetRegisterView : UserControl
     {
+
         public PetRegisterView()
         {
             InitializeComponent();
+        }
+
+        private void showAgeLegend(String _type, int _age)
+        {
+            MessageBox.Show($"Un {_type} no puede tener más de {_age} años", "Comprueba los datos",
+                                                             MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        private bool checkAge(String _type, int _age)
+        {
+            switch (_type)
+            {
+                case "Perro":
+                    if (_age > 29)
+                    {
+                        showAgeLegend(_type, _age);
+                        return false;
+                    }
+                    break;
+                case "Gato":
+                    if (_age > 32)
+                    {
+                        showAgeLegend(_type, _age);
+                        return false;
+                    }
+                    break;
+                default:
+                    return true;
+            }
+            return true;
+        }
+
+        private void BtnRegister_Click(object sender, RoutedEventArgs e)
+        {
+            String name = TextBoxName.Text;
+            int age = 0;
+            String Genere = "Desconocido";
+            String Type = ComboBoxType.Text;
+
+            if (name.Length <= 0 || TextBoxAge.Text.Length <= 0 || Type.Length <= 0)
+            {
+                MessageBox.Show("Hay campos vacios.", "Llena el formulario por favor", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            try { age = int.Parse(TextBoxAge.Text); }
+            catch(Exception ex) { 
+                MessageBox.Show($"El campo de edad solo admite valores númericos positivos.\nMotivo: {ex.Message}", 
+                        "Error en campo de edad", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            if (age < 0)
+            {
+                age *= -1;
+                TextBoxAge.Text = age.ToString();
+            }
+            if (RadioButtonMacho.IsChecked == true)
+                Genere = "Macho";
+            if (RadioButtonHembra.IsChecked == true)
+                Genere = "Hembra";
+            if (checkAge(Type, age)) {
+                //Registro de animal a la base de datos
+                MessageBox.Show("Datos correctos para registro");
+            }
         }
     }
 }
