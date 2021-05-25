@@ -136,13 +136,13 @@
                 <StackPanel Margin="5"
                             Width="300">
 
-                    <Button Style="{StaticResource MaterialDesignRaisedAccentButton}"
+                    <Button x:Name="ButtonLogin" Style="{StaticResource MaterialDesignRaisedAccentButton}"
                             Width="150"
                             Height="30"
                             ToolTip="Pulsa para iniciar sesión"
                             Content="Iniciar sesión" 
                             FontSize="15"
-                            Margin="20"/>
+                            Margin="20" Click="LogIn_Click"/>
                 </StackPanel>
 
                 <StackPanel Margin="10"
