@@ -8,7 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("res/images/wave.svg")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("res/images/vet.jpg")]
 
 

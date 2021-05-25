@@ -17,7 +17,7 @@
                     Grid.Column="0"
                     Grid.RowSpan=" 1">
             <StackPanel.Background>
-                <ImageBrush ImageSource="../res/images/RegisterBack.png"/>
+                <ImageBrush ImageSource="../res/images/brownDog-min.jpg" Stretch="UniformToFill"/>
             </StackPanel.Background>
         </StackPanel>
 
@@ -27,16 +27,16 @@
                     Grid.RowSpan=" 1">
 
             <DockPanel.Background>
-                <ImageBrush ImageSource="../res/images/eXpresso.jpg" />
+                <ImageBrush ImageSource="../res/images/megaTron.jpg" />
             </DockPanel.Background>
 
             <StackPanel VerticalAlignment="Center">
                 
                 <TextBlock FontSize="20"
                            Text="Datos de mascota"
-                           Foreground="White"
+                           Foreground="Black"
                            TextAlignment="Center"
-                           Margin="10"/>
+                           Margin="10" FontWeight="Bold"/>
 
                 <materialDesign:Card
                     Background="WhiteSmoke"
@@ -65,7 +65,7 @@
                                         VerticalAlignment="Stretch"
                                         Width="250"
                                         Margin="10">
-                                <TextBlock Text="Edad de la mascota"
+                                <TextBlock Text="Edad de la mascota (en años)"
                                            FontSize="15"/>
                                 <TextBox    x:Name="TextBoxAge"
                                             materialDesign:HintAssist.Hint="Edad"

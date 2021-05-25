@@ -30,3 +30,7 @@ D:\CETI\Tareas\3ro\POE\Proyecto\Veterinaria\Veterinaria\obj\Debug\Views\ViewDate
 D:\CETI\Tareas\3ro\POE\Proyecto\Veterinaria\Veterinaria\obj\Debug\Views\EditUserDataView.g.cs
 D:\CETI\Tareas\3ro\POE\Proyecto\Veterinaria\Veterinaria\obj\Debug\Views\EditUserDataView.baml
 D:\CETI\Tareas\3ro\POE\Proyecto\Veterinaria\Veterinaria\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\CETI\Tareas\3ro\POE\Proyecto\Veterinaria\Veterinaria\obj\Debug\Views\loginView.g.cs
+D:\CETI\Tareas\3ro\POE\Proyecto\Veterinaria\Veterinaria\obj\Debug\Views\loginView.baml
+D:\CETI\Tareas\3ro\POE\Proyecto\Veterinaria\Veterinaria\obj\Debug\Views\UserRegisterView.g.cs
+D:\CETI\Tareas\3ro\POE\Proyecto\Veterinaria\Veterinaria\obj\Debug\Views\UserRegisterView.baml

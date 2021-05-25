@@ -60,10 +60,10 @@ namespace Veterinaria.Views
         {
             String name = TextBoxName.Text;
             int age = 0;
-            String Genere = "Desconocido";
-            String Type = ComboBoxType.Text;
+            String genere = "Desconocido";
+            String type = ComboBoxType.Text;
 
-            if (name.Length <= 0 || TextBoxAge.Text.Length <= 0 || Type.Length <= 0)
+            if (name.Length <= 0 || TextBoxAge.Text.Length <= 0 || type.Length <= 0)
             {
                 MessageBox.Show("Hay campos vacios.", "Llena el formulario por favor", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
@@ -81,12 +81,12 @@ namespace Veterinaria.Views
                 TextBoxAge.Text = age.ToString();
             }
             if (RadioButtonMacho.IsChecked == true)
-                Genere = "Macho";
+                genere = "Macho";
             if (RadioButtonHembra.IsChecked == true)
-                Genere = "Hembra";
-            if (checkAge(Type, age)) {
+                genere = "Hembra";
+            if (checkAge(type, age)) {
                 //Registro de animal a la base de datos
-                MessageBox.Show("Datos correctos para registro");
+                MessageBox.Show($"Nombre: {name}\nEdad: {age}\nSexo: {genere}\nTipo: {type}", "Información", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
     }

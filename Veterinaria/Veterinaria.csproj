@@ -73,8 +73,14 @@
     <Compile Include="Views\EditUserDataView.xaml.cs">
       <DependentUpon>EditUserDataView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\loginView.xaml.cs">
+      <DependentUpon>loginView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\PetRegisterView.xaml.cs">
       <DependentUpon>PetRegisterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserRegisterView.xaml.cs">
+      <DependentUpon>UserRegisterView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ViewDatesView.xaml.cs">
       <DependentUpon>ViewDatesView.xaml</DependentUpon>
@@ -99,7 +105,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\loginView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\PetRegisterView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserRegisterView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -136,13 +150,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="res\images\back.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="res\images\dogsTogether.jpg" />
     <Resource Include="res\images\golden.jpg" />
-    <Content Include="res\images\Wave.svg" />
-    <Resource Include="res\images\back2.png" />
+    <Resource Include="res\images\brownDog-min.jpg" />
+    <Resource Include="res\images\MegaTron.jpg" />
+    <Resource Include="res\icons\dogHearth.png" />
+    <Resource Include="res\images\SweetMorning.jpg" />
+    <Resource Include="res\icons\google.png" />
+    <Resource Include="res\images\CrimsonTide.jpg" />
     <Resource Include="res\images\registerBack.png" />
     <Resource Include="res\images\eXpresso.jpg" />
     <Content Include="res\images\vet.jpg" />

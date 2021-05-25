@@ -39,10 +39,10 @@ namespace Veterinaria
             switch (((ListViewItem)((ListView)sender).SelectedItem).Name)
             {
                 case "AgendDate":
-                    DataContext = new PetRegisterModel();
+                    DataContext = new AgendDateModel();
                     break;
                 case "RegisterPet":
-                    DataContext = new AgendDateModel();
+                    DataContext = new PetRegisterModel();
                     break;
                 case "PendingDates":
                     DataContext = new ViewDatesModel();

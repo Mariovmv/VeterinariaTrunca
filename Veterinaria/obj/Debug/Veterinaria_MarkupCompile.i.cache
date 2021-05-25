@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\CETI\Tareas\3ro\POE\Proyecto\Veterinaria\Veterinaria\App.xaml
-5-304025913
-21958909280
-141232240198
+71435730538
+1370081198
+16-680079018
 15-381588750
-MainWindow.xaml;Views\AgendDateView.xaml;Views\EditUserDataView.xaml;Views\PetRegisterView.xaml;Views\ViewDatesView.xaml;
+MainWindow.xaml;Views\AgendDateView.xaml;Views\EditUserDataView.xaml;Views\loginView.xaml;Views\PetRegisterView.xaml;Views\UserRegisterView.xaml;Views\ViewDatesView.xaml;
 
-True
+False
 
