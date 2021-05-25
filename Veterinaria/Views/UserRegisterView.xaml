@@ -43,23 +43,23 @@
                        VerticalAlignment="Center"
                        TextAlignment="Center"
                        Foreground="WhiteSmoke"
-                       Width="330" RenderTransformOrigin="0.5,0.5">
-                <TextBlock.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform X="19"/>
-                    </TransformGroup>
-                </TextBlock.RenderTransform>
+                       Width="280">
             </TextBlock>
 
-            <Button Width="50"
+            <StackPanel Orientation="Horizontal" 
+                        Width="100"
+                        HorizontalAlignment="Right">
+                <Button Width="50"
                     Height="30"
-                    HorizontalAlignment="Right"
+                    VerticalAlignment="Stretch" Background="{x:Null}" BorderBrush="{x:Null}" Click="MinimizeWindow_Click">
+                    <materialDesign:PackIcon Kind="WindowMinimize" Width="20" Height="20"/>
+                </Button>
+                <Button Width="50"
+                    Height="30"
                     VerticalAlignment="Stretch" Background="{x:Null}" BorderBrush="{x:Null}" Click="WindowClose_Click">
-                <materialDesign:PackIcon Kind="Close" Width="20" Height="20"/>
-            </Button>
+                    <materialDesign:PackIcon Kind="Close" Width="20" Height="20"/>
+                </Button>
+            </StackPanel>
 
         </DockPanel>
 
