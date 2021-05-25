@@ -40,7 +40,7 @@ namespace Veterinaria
             {
                 case "AgendDate":
                     DataContext = new AgendDateModel();
-                    MessageBox.Show("hola");
+                    MessageBox.Show("hola, soy el trunco lopez");
                     break;
                 case "RegisterPet":
                     DataContext = new PetRegisterModel();
