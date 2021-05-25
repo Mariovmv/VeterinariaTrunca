@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\CETI\Tareas\3ro\POE\Proyecto\Veterinaria\Veterinaria\obj\Debug\
+D:\Proyecto\veterinaria\VeterinariaTrunca\Veterinaria\obj\Debug\
 Veterinaria
 none
 false
 DEBUG;TRACE
-D:\CETI\Tareas\3ro\POE\Proyecto\Veterinaria\Veterinaria\App.xaml
+D:\Proyecto\veterinaria\VeterinariaTrunca\Veterinaria\App.xaml
 71435730538
 1370081198
 15162280349
-15-381588750
+15153325218
 MainWindow.xaml;Views\AgendDateView.xaml;Views\EditUserDataView.xaml;Views\loginView.xaml;Views\PetRegisterView.xaml;Views\UserRegisterView.xaml;Views\ViewDatesView.xaml;
 
 False
